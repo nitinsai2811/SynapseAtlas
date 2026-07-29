@@ -140,7 +140,7 @@ export default function Navbar() {
 
             <Link
               href="/submit"
-              className="block"
+              
             >
               Submit Opportunity
             </Link>
