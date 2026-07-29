@@ -1,4 +1,18 @@
-export const opportunities = [
+export interface Opportunity {
+  id: number;
+  name: string;
+  organiser: string;
+  mode: string;
+  location: string;
+  date: string;
+  deadline: string;
+  committees: string[];
+  fee: string;
+  registration: string;
+}
+
+
+export const opportunities: Opportunity[] = [
   {
     id: 1,
     name: "Synapse Model United Nations 2.0",

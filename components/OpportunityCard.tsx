@@ -1,22 +1,11 @@
-type Opportunity = {
-  name: string;
-  organiser: string;
-  mode: string;
-  location: string;
-  date: string;
-  deadline: string;
-  committees: string[];
-  fee: string;
-  registration: string;
-};
-
+import Link from "next/link";
+import { Opportunity } from "@/data/opportunities";
 
 export default function OpportunityCard({
   opportunity,
 }: {
   opportunity: Opportunity;
 }) {
-
   return (
     <div className="border rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
 
@@ -37,9 +26,11 @@ export default function OpportunityCard({
         🏛 {opportunity.organiser}
       </p>
 
+
       <p className="text-gray-600">
         📍 {opportunity.location} ({opportunity.mode})
       </p>
+
 
       <p className="text-gray-600">
         📅 {opportunity.date}
@@ -70,12 +61,12 @@ export default function OpportunityCard({
       </p>
 
 
-      <a
-  href={`/opportunities/${opportunity.id}`}
-  className="mt-5 block text-center w-full bg-[#D4AF37] py-3 rounded-xl font-bold"
->
-  View Details
-</a>
+      <Link
+        href={`/opportunities/${opportunity.id}`}
+        className="mt-5 block text-center w-full bg-[#D4AF37] py-3 rounded-xl font-bold"
+      >
+        View Details
+      </Link>
 
 
     </div>
