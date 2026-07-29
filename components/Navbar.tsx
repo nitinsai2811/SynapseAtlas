@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -18,13 +18,23 @@ export default function Navbar() {
 
         {/* Logo */}
 
-        <Link
-          href="/"
-          className="text-2xl font-bold text-[#0B1F3A]"
-        >
-          Synapse <span className="text-[#D4AF37]">Atlas</span>
-        </Link>
+<Link
+  href="/"
+  className="flex items-center gap-3"
+>
 
+  <Image
+    src="/logo.png"
+    alt="Synapse Atlas Logo"
+    width={45}
+    height={45}
+  />
+
+  <span className="text-2xl font-bold text-[#0B1F3A]">
+    Synapse Atlas
+  </span>
+
+</Link>
 
 
 

@@ -9,6 +9,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Synapse Atlas",
   description: "Discover MUNs and student opportunities",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 
